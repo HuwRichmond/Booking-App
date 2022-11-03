@@ -1,0 +1,29 @@
+:root {
+  --chakra-colors-celadon-blue: rgb(52, 167, 202);
+  --chakra-colors-maximum-blue-green: rgb(12, 180, 144);
+  --chakra-colors-light-yellow: rgb(255, 252, 180);
+  --chakra-colors-peach-puff: rgb(241, 201, 156);
+  --chakra-colors-bittersweet: rgb(218, 90, 81);
+  --error: rgb(255, 51, 0);
+}
+
+.App {
+  text-align: center;
+}
+
+.header-text {
+  color: white;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 3rem;
+}
+
+.error-text {
+  color: var(--error);
+}
+
+.header-btn:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  transition: 1s;
+}
