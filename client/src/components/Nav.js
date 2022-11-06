@@ -164,7 +164,7 @@ const DesktopNav = () => {
               </Link>
             </PopoverTrigger>
 
-            {navItem.children && (
+            {navItem.dogs && (
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
@@ -173,7 +173,7 @@ const DesktopNav = () => {
                 rounded={'xl'}
                 minW={'sm'}>
                 <Stack>
-                  {navItem.children.map((child) => (
+                  {navItem.dogs.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
                 </Stack>
@@ -234,11 +234,11 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
+const MobileNavItem = ({ label, dogs, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4} onClick={dogs && onToggle}>
       <Flex
         py={2}
         as={Link}
@@ -263,8 +263,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           align={'start'}>
-          {children &&
-            children.map((child) => (
+          {dogs &&
+            dogs.map((child) => (
               <Link key={child.label} py={2} href={child.href}>
                 {child.label}
               </Link>
@@ -278,7 +278,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 interface NavItem {
   label: string;
   subLabel?: string;
-  children?: Array<NavItem>;
+  dogs?: Array<NavItem>;
   href?: string;
 }
 

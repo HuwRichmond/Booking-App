@@ -90,9 +90,9 @@ export default function StatsGridWithImage() {
   );
 }
 
-const StatsText = ({ children }: { children: ReactNode }) => (
+const StatsText = ({ dogs }: { dogs: ReactNode }) => (
   <Text as={'span'} fontWeight={700} color={'#fed9b7ff'}>
-    {children}
+    {dogs}
   </Text>
 );
 

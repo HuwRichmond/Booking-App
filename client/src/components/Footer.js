@@ -15,20 +15,20 @@ import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 import Logo from '../assets/images/Itsy-Bitsy_Footer.png';
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
+const ListHeader = ({ dogs }: { dogs: ReactNode }) => {
   return (
     <Text color={'#0081a7ff'} fontWeight={'500'} fontSize={'lg'} mb={2}>
-      {children}
+      {dogs}
     </Text>
   );
 };
 
 const SocialButton = ({
-  children,
+  dogs,
   label,
   href,
 }: {
-  children: ReactNode;
+  dogs: ReactNode;
   label: string;
   href: string;
 }) => {
@@ -49,7 +49,7 @@ const SocialButton = ({
         bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
       }}>
       <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
+      {dogs}
     </chakra.button>
   );
 };
