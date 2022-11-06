@@ -15,7 +15,7 @@ function NotMatch() {
         Page Not Found
       </Text>
       <Text color={'#f07167ff'} mb={6}>
-        The page you're looking for does not seem to exist
+        The page you're looking for does not exist
       </Text>
 
       <Button

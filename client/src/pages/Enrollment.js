@@ -116,13 +116,13 @@ export default function Enrollment() {
                           <HStack spacing={10}>
                             <Box>
                               <FormControl id="firstName" width={"18rem"} isRequired>
-                                <FormLabel color={'white'}>Child's First Name</FormLabel>
+                                <FormLabel color={'white'}>Dog's First Name</FormLabel>
                                 <Input border={'none'} bg={'whiteAlpha.400'} color={'white'} placeholder="" name="cFirstName" type="firstName" id="firstName" value={enquiry.childFirstName} onChange={handleChange} />
                               </FormControl>
                             </Box>
                             <Box>
                               <FormControl id="lastName" width={"18rem"} isRequired>
-                                <FormLabel color={'white'}>Child's Last Name</FormLabel>
+                                <FormLabel color={'white'}>Dog's Last Name</FormLabel>
                                 <Input border={'none'} bg={'whiteAlpha.400'} color={'white'}  placeholder="" name="cLastName" type="lastName" id="lastName" value={enquiry.childLastName} onChange={handleChange}/>
                               </FormControl>
                             </Box>
@@ -166,7 +166,7 @@ export default function Enrollment() {
                     <HStack spacing={12}>
                     <Box>
                       <FormControl id="dob" isRequired>
-                        <FormLabel color={'white'}>Child's Date of Birth</FormLabel>
+                        <FormLabel color={'white'}>Dog's Date of Birth</FormLabel>
                         
                         <Input
                         // value={<Moment color={'white'} date="03/08/2022" format="YYYY/MM/DD"/>}
@@ -204,22 +204,22 @@ export default function Enrollment() {
                   </HStack>
                   </Box>
                   </TabPanel>
-                                {/* //Parent Details */}
+                                {/* //Dog Owner's Details */}
                   <TabPanel>
                   <Box rounded={'lg'} bg={'blackAlpha.700'} boxShadow={'lg'} p={8}>
-                  <FormLabel color={'white'} fontSize="30px">Parent 1</FormLabel>
+                  <FormLabel color={'white'} fontSize="30px">Owner 1</FormLabel>
                   <Stack spacing={3}>  
                       <Stack spacing={3}>
                           <HStack spacing={10}>
                             <Box>
                               <FormControl id="parentFirstName" width={"18rem"} isRequired>
-                                <FormLabel color={'white'}>Parent's First Name</FormLabel>
+                                <FormLabel color={'white'}>Owner's First Name</FormLabel>
                                 <Input border={'none'} bg={'whiteAlpha.400'} color={'white'} placeholder="" name="cFirstName" type="firstName" id="firstName" value={enquiry.firstName} onChange={handleChange} />
                               </FormControl>
                             </Box>
                             <Box>
                               <FormControl id="parentLastName" width={"18rem"} isRequired>
-                                <FormLabel color={'white'}>Parent's Last Name</FormLabel>
+                                <FormLabel color={'white'}>Owner's Last Name</FormLabel>
                                 <Input border={'none'} bg={'whiteAlpha.400'} color={'white'}  placeholder="" name="cLastName" type="lastName" id="lastName" value={enquiry.lastName} onChange={handleChange}/>
                               </FormControl>
                             </Box>
@@ -261,19 +261,19 @@ export default function Enrollment() {
                             <Input border={'none'} bg={'whiteAlpha.400'} color={'white'} placeholder="" name="cPostCode" value={enquiry.postCode} type="postcode" onChange={handleChange} />
                             </FormControl>
                     </HStack>
-                    <FormLabel color={'white'} fontSize="30px">Parent 2</FormLabel>
+                    <FormLabel color={'white'} fontSize="30px">Owner 2</FormLabel>
                     {/* //Parent 2 */}
                     <Stack spacing={3}>
                           <HStack spacing={10}>
                             <Box>
                               <FormControl id="parentFirstName" width={"18rem"} isRequired>
-                                <FormLabel color={'white'}>Parent's First Name</FormLabel>
+                                <FormLabel color={'white'}>Owner's First Name</FormLabel>
                                 <Input border={'none'} bg={'whiteAlpha.400'} color={'white'} placeholder="" name="cFirstName" type="firstName" id="firstName" value={enquiry.firstName} onChange={handleChange} />
                               </FormControl>
                             </Box>
                             <Box>
                               <FormControl id="parentLastName" width={"18rem"} isRequired>
-                                <FormLabel color={'white'}>Parent's Last Name</FormLabel>
+                                <FormLabel color={'white'}>Owner's Last Name</FormLabel>
                                 <Input border={'none'} bg={'whiteAlpha.400'} color={'white'}  placeholder="" name="cLastName" type="lastName" id="lastName" value={enquiry.lastName} onChange={handleChange}/>
                               </FormControl>
                             </Box>

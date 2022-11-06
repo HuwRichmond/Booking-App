@@ -46,52 +46,52 @@ db.once('open', async () => {
     
     await CentreRoom.deleteMany();
 
-    const centreroom = await CentreRoom.insertMany([
+    const Centreroom = await CentreRoom.insertMany([
       {
         roomName: 'small-dogs',
         roomCapacity: 10,
         roomSupervisor: 'Emma'
       },
       {
-        roomName: 'Elimentary',
+        roomName: 'medium-dogs',
         roomCapacity: 8,
-        roomSupervisor: 'Christi'
+        roomSupervisor: 'Andrew'
       },
       {
-        roomName: 'Primary',
-        roomCapacity: 12,
-        roomSupervisor: 'Sylvia Dsouza'
+        roomName: 'big-dogs',
+        roomCapacity: 6,
+        roomSupervisor: 'James'
       }
     ]);
 
-    await Branch.deleteMany();
+    await Centre.deleteMany();
 
-    const branch = await Branch.insertMany([
+    const Centre = await Centre.insertMany([
       {
-        branchName: 'Lakemba Branch',
-        addressLine1: '529 Canterbury Rd',
+        CentreName: 'Hallett Cove',
+        addressLine1: '123 Hallett Cove Rd',
         addressLine2: '',
-        suburb: 'Lakemba',
-        state: 'NSW',
-        postCode: '2195',
-        email1: 'lakemba.itsy@itsybitsy.com',
+        suburb: 'Hallett Cove',
+        state: 'SA',
+        postCode: '5158',
+        email1: 'hallett.cove@scruffymuffins.com',
         email2: '',
-        phone1: '0405685654',
+        phone1: '0401234567',
         phone2: '',
-        branchRoom: branchroom[0]._id
+        CentreRoom: Centreroom[0]._id
       },
       {
-        branchName: 'Wentworthville Branch',
-        addressLine1: '529 Canterbury Rd',
+        CentreName: 'Somerton Park',
+        addressLine1: '12 Somerton Park Rd',
         addressLine2: '',
-        suburb: 'Wentworthville',
-        state: 'NSW',
-        postCode: '2145',
-        email1: 'wenty.itsy@itsybitsy.com',
+        suburb: 'Somerton Park',
+        state: 'SA',
+        postCode: '5044',
+        email1: 'somerton.park@scruffymuffins.com',
         email2: '',
         phone1: '0412345678',
         phone2: '',
-        branchRoom: branchroom[2]._id
+        CentreRoom: Centreroom[2]._id
       }
     ]);
 
@@ -99,47 +99,47 @@ db.once('open', async () => {
 
     await Enquiry.insertMany([
       {
-        firstName: 'Ahmed',
-        lastName: 'Mansoor',
-        addressLine1: '3/66 Denman Avenue',
+        firstName: 'Huw',
+        lastName: 'Richmond',
+        addressLine1: '5 Smith Avenue',
         addressLine2: '',
-        suburb: 'Wiley Park',
-        state: 'NSW',
-        postCode: '2195',
-        email: 'just_mansoor@gmail.com',
-        phone: '0470112185',
-        childFirstName: 'Ismael',
-        childLastName: 'Shah',
-        childDateOfBirth: '01/04/2015',
+        suburb: 'Brighton',
+        state: 'SA',
+        postCode: '5048',
+        email: 'huw.richmond@gmail.com',
+        phone: '0491333555',
+        DogFirstName: 'Rosie',
+        DogLastName: 'Young',
+        DogDateOfBirth: '09/12/2020',
         requestedDays: ['mon', 'tue', 'wed', 'thu'],
-        branch: branch[0]._id,
-        branchRoom: branch.map((b) => b.branchRoom)
+        Centre: Centre[0]._id,
+        CentreRoom: Centre.map((b) => b.CentreRoom)
       }
     ]);
 
     await Enquiry.insertMany([
       {
-        firstName: 'Kamal',
-        lastName: 'Mehmood',
-        addressLine1: '281 Beames Avenue',
+        firstName: 'Emma',
+        lastName: 'Young',
+        addressLine1: '13 Seaview Avenue',
         addressLine2: '',
-        suburb: 'Mt Druitt',
-        state: 'NSW',
-        postCode: '2770',
-        email: 'km_wonder@gmail.com',
-        phone: '0471256235',
-        childFirstName: 'Rayan',
-        childLastName: 'Kamal',
-        childDateOfBirth: '11/25/2019',
+        suburb: 'Hallett Cove',
+        state: 'SA',
+        postCode: '5158',
+        email: 'emma.young@gmail.com',
+        phone: '0430300987',
+        DogFirstName: 'Angus',
+        DogLastName: 'Young',
+        DogDateOfBirth: '10/02/2022',
         requestedDays: ['mon', 'tue'],
-        branch: branch[0]._id,
-        branchRoom: branch.map((b) => b.branchRoom)
+        Centre: Centre[0]._id,
+        CentreRoom: Centre.map((b) => b.CentreRoom)
       }
     ])
 
     console.log('User added!');
-    console.log('Branch added!');
-    console.log('BranchRoom added!');
+    console.log('Centre added!');
+    console.log('CentreRoom added!');
     console.log('Enquiry added!');
     process.exit(0);
 });

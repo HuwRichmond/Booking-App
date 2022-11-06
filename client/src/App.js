@@ -50,12 +50,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// const Navi = lazy(() => {
-//   return new Promise((resolve) => {
-//     setTimeout(() => resolve(import('./components/Nav')), 2500);
-//   });
-// });
-
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -101,7 +95,7 @@ function App() {
               <Route 
                 path="/enquire" 
                 element={<Enquire branches={AllBranches}/>} 
-                //element={<BasicUsage />} 
+                
               />
               <Route 
                 path="/enquiries/:enquiryId" 
