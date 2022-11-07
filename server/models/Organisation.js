@@ -56,10 +56,10 @@ const userSchema = new Schema({
     type: String,
     enum: ['FREE', 'BASIC', 'PREMIUM']
   },
-  branches: [
+  centres: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Branch',
+      ref: 'Centres',
     },
   ]
 });

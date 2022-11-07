@@ -71,9 +71,9 @@ export const QUERY_SINGLE_ENQUIRY = gql `
   }
 `;
 
-export const BRANCHES = gql`
-query AllBranches {
-  allBranches {
+export const CENTRES = gql`
+query AllCentres {
+  allCentres {
     _id
     branchName
     addressLine1

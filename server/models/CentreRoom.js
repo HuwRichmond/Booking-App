@@ -17,6 +17,6 @@ const userSchema = new Schema({
   },
 });
 
-const BranchRoom = mongoose.model('BranchRoom', userSchema);
+const CentreRoom = mongoose.model('CentreRoom', userSchema);
 
-module.exports = BranchRoom;
+module.exports = CentreRoom;

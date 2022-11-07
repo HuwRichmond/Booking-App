@@ -163,13 +163,13 @@ const userSchema = new Schema({
   daysAllocated: {
     type: Array,
   },
-  branchRoom: [{
+  CentreRoom: [{
     type: Schema.Types.ObjectId,
-    ref: 'BranchRoom',
+    ref: 'CentreRoom',
   }]
 });
 
 
-const Child = mongoose.model('Child', userSchema);
+const Dogs = mongoose.model('Dogs', userSchema);
 
-module.exports = Child;
+module.exports = Dogs;

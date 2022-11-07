@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  branchName: {
+  CentreName: {
     type: String,
     required: true,
     trim: true
@@ -44,9 +44,9 @@ const userSchema = new Schema({
   phone2: {
     type: String,
   },
-  branchRoom: [{
+  CentreRoom: [{
     type: Schema.Types.ObjectId,
-    ref: 'BranchRoom',
+    ref: 'CentreRoom',
   }]
 });
 
@@ -62,6 +62,6 @@ userSchema.pre('save', async function(next) {
 });
 
 
-const Branch = mongoose.model('Branch', userSchema);
+const Centre = mongoose.model('Centre', userSchema);
 
-module.exports = Branch;
+module.exports = Centre;

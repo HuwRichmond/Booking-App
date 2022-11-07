@@ -23,7 +23,7 @@ import {
   } from '@chakra-ui/react';
 
 import { useQuery } from '@apollo/client';
-import { BRANCHES } from '../utils/queries';
+import { CENTRES } from '../utils/queries';
 
   const Enquiry = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -33,9 +33,9 @@ import { BRANCHES } from '../utils/queries';
     
     const isInvalid = formState.lastName === '' || formState.email ==='';
 
-    const { data } = useQuery(BRANCHES);
-    const branches = data?.allBranches || [];
-    //console.log(branches);
+    const { data } = useQuery(CENTRES);
+    const centres = data?.allCentres || [];
+    //console.log(centres);
     
     const handleFormSubmit = async (event) => {
       event.preventDefault();
@@ -102,7 +102,7 @@ import { BRANCHES } from '../utils/queries';
           return([]);
         }
         else{
-          const branchRooms = branches.filter(branch => branch._id === selectValue.target.value);
+          const branchRooms = centres.filter(branch => branch._id === selectValue.target.value);
           let rm=[];
           const rooms = [branchRooms.map((m) =>
               m.branchRoom.forEach(p => {
@@ -361,7 +361,7 @@ import { BRANCHES } from '../utils/queries';
                           onChange={value => setSelectValue(value)}
                         >
                           <option key="NONE" value="NONE">Choose Centre</option>
-                          {branches.map((m) => (
+                          {centres.map((m) => (
                             <option key={m._id} value={m._id}>{m.branchName} </option>
                           ))
                           }

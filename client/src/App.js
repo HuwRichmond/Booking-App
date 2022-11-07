@@ -18,7 +18,7 @@ import Login from './pages/Login';
 import Enquire from './pages/Enquire';
 import SingleEnquiry from './pages/SingleEnquiry';
 import Dashboard from './pages/Dashboard';
-import Branches from './pages/Branches';
+import Centres from './pages/Centres';
 import About from './pages/About';
 import Vision from './pages/Vision';
 import NoMatch from './pages/NoMatch';
@@ -29,7 +29,7 @@ import Forgot from './pages/Forgot';
 import ResetPassword from './pages/ResetPassword';
 import Enrollment from './pages/Enrollment';
 
-import AllBranches from './components/Branches';
+import AllCentres from './components/Centres';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -94,7 +94,7 @@ function App() {
               />
               <Route 
                 path="/enquire" 
-                element={<Enquire branches={AllBranches}/>} 
+                element={<Enquire centres={AllCentres}/>} 
                 
               />
               <Route 
@@ -120,8 +120,8 @@ function App() {
               />
 
               <Route 
-                path="/dashboard/branches" 
-                element={<Branches />} 
+                path="/dashboard/centres" 
+                element={<Centres />} 
               />
 
               <Route 

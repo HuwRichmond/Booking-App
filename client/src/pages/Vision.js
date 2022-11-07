@@ -63,7 +63,7 @@ export default function StatsGridWithImage() {
                 mb={5}
                 fontSize={{ base: "xl", md: "3xl" }}
               >
-                Every young child experiences excellence in early education.
+                We believe in treating every dog like our own.
               </Heading>
               <Text
                 fontFamily={"heading"}
