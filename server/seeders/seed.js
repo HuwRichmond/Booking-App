@@ -1,4 +1,3 @@
-//This file will only create **** ONE MAIN**** login for user which will have access to backend
 const db = require('../config/connection');
 const { User, Centre, CentreRoom, Enquiry } = require('../models');
 
@@ -137,9 +136,9 @@ db.once('open', async () => {
       }
     ])
 
-    console.log('User added!');
-    console.log('Centre added!');
-    console.log('CentreRoom added!');
-    console.log('Enquiry added!');
+    console.log('User added');
+    console.log('Centre added');
+    console.log('CentreRoom added');
+    console.log('Enquiry added');
     process.exit(0);
 });
