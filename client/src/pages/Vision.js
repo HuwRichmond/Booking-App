@@ -113,34 +113,34 @@ const StatsText = ({ dogs }: { dogs: ReactNode }) => (
 
 const stats = [
   {
-    title: 'Leadership',
+    title: 'Care',
     content: (
       <>
-        <StatsText>Leadership</StatsText> this is space for a values statement. Text to follow each value.
+        <StatsText>Care</StatsText> this is space for a values statement. Text to follow each value.
       </>
     ),
   },
   {
-    title: 'Innovation',
+    title: 'Education',
     content: (
       <>
-        <StatsText>Innovation</StatsText> this is space for a values statement. Text to follow each value.
+        <StatsText>Education</StatsText> this is space for a values statement. Text to follow each value.
       </>
     ),
   },
   {
-    title: 'Sustainability',
+    title: 'Safety',
     content: (
       <>
-        <StatsText>Sustainability</StatsText> this is space for a values statement. Text to follow each value.
+        <StatsText>Safety</StatsText> this is space for a values statement. Text to follow each value.
       </>
     ),
   },
   {
-    title: 'Diversity & Inclusion',
+    title: 'Trust',
     content: (
       <>
-        <StatsText>Diversity</StatsText> this is space for a values statement. Text to follow each value.
+        <StatsText>Trust</StatsText> this is space for a values statement. Text to follow each value.
       </>
     ),
   },

@@ -98,34 +98,34 @@ const StatsText = ({ dogs }: { dogs: ReactNode }) => (
 
 const stats = [
   {
-    title: '128+',
+    title: '45',
     content: (
       <>
-        <StatsText>Services</StatsText> details about services provided.
+        <StatsText>Dogs</StatsText> are members at the Centre.
       </>
     ),
   },
   {
-    title: '5,030',
+    title: '25',
     content: (
       <>
-        <StatsText>Members</StatsText> information about a membership body.
+        <StatsText>Reviews</StatsText> number of 5 star reviews.
       </>
     ),
   },
   {
-    title: '185+',
+    title: '12',
     content: (
       <>
-        <StatsText>Professional</StatsText> staff section.
+        <StatsText>Team Members</StatsText> the number of team members.
       </>
     ),
   },
   {
-    title: '680+',
+    title: '20',
     content: (
       <>
-        <StatsText>Dogs</StatsText> special requests that can be accommodated.
+        <StatsText>Capacity</StatsText> number of dogs at a time.
       </>
     ),
   },

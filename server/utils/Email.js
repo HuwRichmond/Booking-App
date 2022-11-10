@@ -9,8 +9,8 @@ const sendMail = (mailType, userData) =>{
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {  
-        user: "noreply.itsybitsy@gmail.com",
-        pass: "nghbjkdvpboonoyt",
+        user: "scruffy.muffins@gmail.com",
+        pass: "password123",
       },
     });
     
@@ -29,18 +29,18 @@ const sendMail = (mailType, userData) =>{
       let token = userData.code;
       emailTo= userData.email;
       mailSubject = "Reset Password ";
-      mailText=`<p>Your security code to reset password is </p><br><br><b> ${token}</b> <br><br> <p> follow https://itsy-bitsy-daycare.herokuapp.com/resetpassword</p>`
+      mailText=`<p>Your security code to reset password is </p><br><br><b> ${token}</b> <br><br> <p> follow https://Booking-App.herokuapp.com/resetpassword</p>`
     }
     else if (mailType="Enrollment")
     {
       let enrollmentCode = userData.enrollmentCode;
       emailTo= userData.email;
       mailSubject = "Enrollment Link ";
-      mailText=`<p>Please follow the link below and complete the enrollment form </p><br><br><b> https://itsy-bitsy-daycare.herokuapp.com/enrollment/${enrollmentCode}</b> <br><br>`
+      mailText=`<p>Please follow the link below and complete the enrollment form </p><br><br><b> https://Booking-App.herokuapp.com/enrollment/${enrollmentCode}</b> <br><br>`
     }
     
     let mailOptions = {
-      from: 'noreply.itsybitsy@gmail.com',
+      from: 'scruffy.muffins@gmail.com',
       to: emailTo,
       subject: mailSubject,
       html: mailText
@@ -76,12 +76,12 @@ const sendMail = (mailType, userData) =>{
       </header>
       <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
-        Hello ${fullname}, Thanks for sending enquiry, someone from Itsy Bitsy will contact soon.!
+        Hello ${fullname}, Thanks for your enquiry, we will get back to you soon.!
         <br>
       </main>
       <footer>
         Regards,
-        Itsy Bitsy
+        Scruffy Muffins
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
