@@ -130,7 +130,7 @@ const SingleEnquiry = () => {
                 Applied to enrol their dog <chakra.span fontWeight={'bold'} color={'#fed9b7ff'}>{enquiry.childFirstName}{" "}
                 {enquiry.childLastName}</chakra.span> on {enquiry.createdAt} for{" "}
                 <chakra.span fontWeight={'bold'} color={'#00afb9ff'}>
-                {enquiry.branch.map((m) => m.branchName)}.</chakra.span>
+                {enquiry.Centre.map((m) => m.CentreName)}.</chakra.span>
                 </Text>
                 <Text
                 fontSize={{ base: "16px", lg: "18px" }}
@@ -139,13 +139,13 @@ const SingleEnquiry = () => {
                 textTransform={"uppercase"}
                 mb={"4"}
                 >
-                {console.log(enquiry.branchRoom)}
+                {console.log(enquiry.CentreRoom)}
                 Please check the capacity in room{" "}
                 <chakra.span color={'red'}>
-                    {enquiry.branchRoom.map((m) => m.roomName)}
+                    {enquiry.CentreRoom.map((m) => m.roomName)}
                 </chakra.span>this room has space for{" "}
                 <chakra.span fontWeight={'bold'} color={'red'}>
-                    {enquiry.branchRoom.map((m) => m.roomCapacity)}
+                    {enquiry.CentreRoom.map((m) => m.roomCapacity)}
                 </chakra.span>. And contact at their
                 phone number i.e. <chakra.span fontWeight={'bold'} color={'white'}>
                     {enquiry.phone}

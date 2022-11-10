@@ -58,8 +58,8 @@ import { CENTRES } from '../utils/queries';
             childLastName: formState.clastName,
             childDateOfBirth: "2013/01/01",
             requestedDays: formState.reqdays,
-            branch: formState.branch,
-            branchRoom: formState.branchRoom,
+            Centre: formState.Centre,
+            CentreRoom: formState.CentreRoom,
           },
         });
         setIsLoading(false);
@@ -98,14 +98,14 @@ import { CENTRES } from '../utils/queries';
       if (selectValue){
         if (selectValue.target.value === "NONE")
         {
-          console.log("select branch");
+          console.log("select Centre");
           return([]);
         }
         else{
-          const branchRooms = centres.filter(branch => branch._id === selectValue.target.value);
+          const CentreRooms = centres.filter(Centre => Centre._id === selectValue.target.value);
           let rm=[];
-          const rooms = [branchRooms.map((m) =>
-              m.branchRoom.forEach(p => {
+          const rooms = [CentreRooms.map((m) =>
+              m.CentreRoom.forEach(p => {
                 rm.push({
                   value: p._id,
                   label: p.roomName
@@ -115,7 +115,7 @@ import { CENTRES } from '../utils/queries';
 
           setFormState({
             ...formState,
-            ["branch"]: selectValue.target.value,
+            ["Centre"]: selectValue.target.value,
           });
           return rm;
       }}
@@ -348,36 +348,36 @@ import { CENTRES } from '../utils/queries';
                   </HStack>
                   <HStack spacing={20}>
                     <Box>
-                    <FormControl id="branch" isRequired >
+                    <FormControl id="Centre" isRequired >
                         <FormLabel color={'white'}>Location</FormLabel>
                         <Select
                           border={'none'}
                           bg={'whiteAlpha.600'}
                           color={'black'}
                           placeholder=""
-                          name="branch"
-                          type="branch"
-                          //onChange={handleBranchChange}
+                          name="Centre"
+                          type="Centre"
+                          //onChange={handleCentreChange}
                           onChange={value => setSelectValue(value)}
                         >
                           <option key="NONE" value="NONE">Choose Centre</option>
                           {centres.map((m) => (
-                            <option key={m._id} value={m._id}>{m.branchName} </option>
+                            <option key={m._id} value={m._id}>{m.CentreName} </option>
                           ))
                           }
                         </Select>
                       </FormControl>
                     </Box>
                     <Box>
-                      <FormControl id="branchRoom" isRequired >
+                      <FormControl id="CentreRoom" isRequired >
                         <FormLabel color={'white'}>Room</FormLabel>
                         <Select
                           border={'none'}
                           bg={'whiteAlpha.600'}
                           color={'black'}
                           placeholder=""
-                          name="branchRoom"
-                          type="branchRoom"
+                          name="CentreRoom"
+                          type="CentreRoom"
                           onChange={handleChange}
                           // option={options}
                         >

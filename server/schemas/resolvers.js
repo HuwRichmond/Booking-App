@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const randToken = require('rand-token');
-const { User , Centre, BranchRoom, Enquiry} = require('../models');
+const { User , Centre, CentreRoom, Enquiry} = require('../models');
 const { signToken } = require('../utils/auth');
 const sendMail = require('../utils/Email');
 
@@ -38,7 +38,7 @@ const resolvers = {
       return enquiry;
     },
     
-    allBranches: async() => {
+    allCentres: async() => {
       const Centres = await Centre.find({}).populate('CentreRoom');
       return Centres;
     },

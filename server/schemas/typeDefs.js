@@ -62,8 +62,8 @@ const typeDefs = gql`
     dogDateOfBirth: Date
     requestedDays: [String]
     createdAt: String
-    Centre: [Branch]
-    CentreRoom: [BranchRoom]
+    Centre: [Centre]
+    CentreRoom: [CentreRoom]
     enrollmentCode: String
   }
 
