@@ -127,8 +127,8 @@ const SingleEnquiry = () => {
             >
             <VStack spacing={{ base: 4, sm: 6 }} alignSelf={'center'} w={{base: 'none', md: '90vh'}} rounded={"lg"} bg={"blackAlpha.700"} boxShadow={"lg"} p={8}>
                 <Text color={"white"} fontSize={"2xl"} fontWeight={"300"}>
-                Applied to enrol their dog <chakra.span fontWeight={'bold'} color={'#fed9b7ff'}>{enquiry.childFirstName}{" "}
-                {enquiry.childLastName}</chakra.span> on {enquiry.createdAt} for{" "}
+                Applied to enrol their dog <chakra.span fontWeight={'bold'} color={'#fed9b7ff'}>{enquiry.dogFirstName}{" "}
+                {enquiry.dogLastName}</chakra.span> on {enquiry.createdAt} for{" "}
                 <chakra.span fontWeight={'bold'} color={'#00afb9ff'}>
                 {enquiry.centre.map((m) => m.centreName)}.</chakra.span>
                 </Text>

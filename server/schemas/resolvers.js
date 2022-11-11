@@ -26,26 +26,26 @@ const resolvers = {
     enquiries: async() => {
       const enquiries = await Enquiry.find({})
       .sort({ createdAt: -1 })
-      .populate('Centre')
-      .populate('CentreRoom');
+      .populate('centre')
+      .populate('centreRoom');
       return enquiries;
     },
 
     enquiry: async (Owner, { enquiryId }) => {
       const enquiry = await Enquiry.findOne({ _id: enquiryId })
-      .populate('Centre')
-      .populate('CentreRoom');
+      .populate('centre')
+      .populate('centreRoom');
       return enquiry;
     },
     
     allCentres: async() => {
-      const Centres = await Centre.find({}).populate('CentreRoom');
-      return Centres;
+      const centres = await Centre.find({}).populate('centreRoom');
+      return centres;
     },
 
     allCentreRooms: async() => {
-      const CentreRooms = await CentreRoom.find({});
-      return CentreRooms;
+      const centreRooms = await CentreRoom.find({});
+      return centreRooms;
     },
     
     searchEnrollmentLink : async(Owner, {enrollmentCode}) => {
@@ -98,10 +98,10 @@ const resolvers = {
     },
 
     addCentreRoom: async(Owner,{roomName, roomCapacity, roomSupervisor, centreId }) => {
-      const CentreRoom = await CentreRoom.create({roomName: roomName, roomCapacity: roomCapacity, roomSupervisor: roomSupervisor});
-      const updateCentre = await Centre.findByIdAndUpdate(CentreId, {$addToSet: { CentreRoom : CentreRoom._id }}, { new: true });
+      const centreRoom = await CentreRoom.create({roomName: roomName, roomCapacity: roomCapacity, roomSupervisor: roomSupervisor});
+      const updateCentre = await Centre.findByIdAndUpdate(centreId, {$addToSet: { centreRoom : centreRoom._id }}, { new: true });
 
-      return (CentreRoom);
+      return (centreRoom);
     },
 
     addEnquiry: async (parent, args) => {

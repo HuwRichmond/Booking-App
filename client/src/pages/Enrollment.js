@@ -67,7 +67,7 @@ export default function Enrollment() {
   }
 
 
-  const vall= formatDate(enquiry.childDateOfBirth);
+  const vall= formatDate(enquiry.dogDateOfBirth);
   const requestedDays = [enquiry.requestedDays];
   // const requestDay = enquiry.map((i) => {return i})
   console.log("RequestesDays", requestedDays);
@@ -117,13 +117,13 @@ export default function Enrollment() {
                             <Box>
                               <FormControl id="firstName" width={"18rem"} isRequired>
                                 <FormLabel color={'white'}>Dog's First Name</FormLabel>
-                                <Input border={'none'} bg={'whiteAlpha.400'} color={'white'} placeholder="" name="cFirstName" type="firstName" id="firstName" value={enquiry.childFirstName} onChange={handleChange} />
+                                <Input border={'none'} bg={'whiteAlpha.400'} color={'white'} placeholder="" name="cFirstName" type="firstName" id="firstName" value={enquiry.dogFirstName} onChange={handleChange} />
                               </FormControl>
                             </Box>
                             <Box>
                               <FormControl id="lastName" width={"18rem"} isRequired>
                                 <FormLabel color={'white'}>Dog's Last Name</FormLabel>
-                                <Input border={'none'} bg={'whiteAlpha.400'} color={'white'}  placeholder="" name="cLastName" type="lastName" id="lastName" value={enquiry.childLastName} onChange={handleChange}/>
+                                <Input border={'none'} bg={'whiteAlpha.400'} color={'white'}  placeholder="" name="cLastName" type="lastName" id="lastName" value={enquiry.dogLastName} onChange={handleChange}/>
                               </FormControl>
                             </Box>
                           </HStack>

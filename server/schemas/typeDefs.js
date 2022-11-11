@@ -26,7 +26,7 @@ const typeDefs = gql`
 
   type Centre {
     _id: ID
-    CentreName: String
+    centreName: String
     addressLine1: String
     addressLine2: String
     suburb: String
@@ -36,7 +36,7 @@ const typeDefs = gql`
     email2: String
     phone1: String
     phone2: String
-    CentreRoom: [CentreRoom]
+    centreRoom: [CentreRoom]
   }
 
   type CentreRoom {
@@ -62,8 +62,8 @@ const typeDefs = gql`
     dogDateOfBirth: Date
     requestedDays: [String]
     createdAt: String
-    Centre: [Centre]
-    CentreRoom: [CentreRoom]
+    centre: [Centre]
+    centreRoom: [CentreRoom]
     enrollmentCode: String
   }
 
@@ -82,11 +82,11 @@ const typeDefs = gql`
     addUser(firstName: String!, lastName: String!, email: String!, password: String!, userType: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-    addCentreRoom(roomName: String!, roomCapacity: Int!, roomSupervisor: String!, CentreId: ID!): CentreRoom
+    addCentreRoom(roomName: String!, roomCapacity: Int!, roomSupervisor: String!, centreId: ID!): CentreRoom
     singleCentreRoom(_id: ID!): CentreRoom
     resetPassword(email: String!): Reset
     updatePassword(email: String!, resetCode: String!, password: String!): User
-    addEnquiry(firstName: String!, lastName: String!, addressLine1: String!, addressLine2: String, suburb: String!, state: String!, postCode: String!, email: String!, phone: String!, dogFirstName: String!, dogLastName: String!, dogDateOfBirth: Date!, requestedDays: [String]!, Centre: ID!, CentreRoom: ID!): Enquiry
+    addEnquiry(firstName: String!, lastName: String!, addressLine1: String!, addressLine2: String, suburb: String!, state: String!, postCode: String!, email: String!, phone: String!, dogFirstName: String!, dogLastName: String!, dogDateOfBirth: Date!, requestedDays: [String]!, centre: ID!, centreRoom: ID!): Enquiry
     removeEnquiry(enquiryId: ID!): Enquiry
     sendEnrollmentLink(enquiryId: ID!) : Enquiry
     

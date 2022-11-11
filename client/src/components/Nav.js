@@ -173,8 +173,8 @@ const DesktopNav = () => {
                 rounded={'xl'}
                 minW={'sm'}>
                 <Stack>
-                  {navItem.dogs.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
+                  {navItem.dogs.map((dog) => (
+                    <DesktopSubNav key={dog.label} {...dog} />
                   ))}
                 </Stack>
               </PopoverContent>
@@ -264,9 +264,9 @@ const MobileNavItem = ({ label, dogs, href }: NavItem) => {
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           align={'start'}>
           {dogs &&
-            dogs.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
+            dogs.map((dog) => (
+              <Link key={dog.label} py={2} href={dog.href}>
+                {dog.label}
               </Link>
             ))}
         </Stack>

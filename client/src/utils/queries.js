@@ -23,9 +23,9 @@ export const QUERY_ENQUIRIES = gql`
       postCode
       email
       phone
-      childFirstName
-      childLastName
-      childDateOfBirth
+      dogFirstName
+      dogLastName
+      dogDateOfBirth
       createdAt
       requestedDays
       centre {
@@ -53,9 +53,9 @@ export const QUERY_SINGLE_ENQUIRY = gql `
       postCode
       email
       phone
-      childFirstName
-      childLastName
-      childDateOfBirth
+      dogFirstName
+      dogLastName
+      dogDateOfBirth
       createdAt
       requestedDays
       centre {
@@ -109,9 +109,9 @@ query searchEnrollmentLink($enrollmentCode: String!) {
     postCode
     email
     phone
-    childFirstName
-    childLastName
-    childDateOfBirth
+    dogFirstName
+    dogLastName
+    dogDateOfBirth
     requestedDays
     createdAt
     centre {

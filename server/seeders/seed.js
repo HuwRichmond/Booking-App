@@ -45,7 +45,7 @@ db.once('open', async () => {
     
     await CentreRoom.deleteMany();
 
-    const Centreroom = await CentreRoom.insertMany([
+    const centreroom = await CentreRoom.insertMany([
       {
         roomName: 'small-dogs',
         roomCapacity: 10,
@@ -65,9 +65,9 @@ db.once('open', async () => {
 
     await Centre.deleteMany();
 
-    const Centre = await Centre.insertMany([
+    const centre = await Centre.insertMany([
       {
-        CentreName: 'Hallett Cove',
+        centreName: 'Hallett Cove Centre',
         addressLine1: '123 Hallett Cove Rd',
         addressLine2: '',
         suburb: 'Hallett Cove',
@@ -77,10 +77,10 @@ db.once('open', async () => {
         email2: '',
         phone1: '0401234567',
         phone2: '',
-        CentreRoom: Centreroom[0]._id
+        centreRoom: centreroom[0]._id
       },
       {
-        CentreName: 'Somerton Park',
+        centreName: 'Somerton Park Centre',
         addressLine1: '12 Somerton Park Rd',
         addressLine2: '',
         suburb: 'Somerton Park',
@@ -90,7 +90,7 @@ db.once('open', async () => {
         email2: '',
         phone1: '0412345678',
         phone2: '',
-        CentreRoom: Centreroom[2]._id
+        centreRoom: centreroom[2]._id
       }
     ]);
 
@@ -107,12 +107,12 @@ db.once('open', async () => {
         postCode: '5048',
         email: 'huw.richmond@gmail.com',
         phone: '0491333555',
-        DogFirstName: 'Rosie',
-        DogLastName: 'Young',
-        DogDateOfBirth: '09/12/2020',
+        dogFirstName: 'Rosie',
+        dogLastName: 'Young',
+        dogDateOfBirth: '09/12/2020',
         requestedDays: ['mon', 'tue', 'wed', 'thu'],
-        Centre: Centre[0]._id,
-        CentreRoom: Centre.map((b) => b.CentreRoom)
+        centre: centre[0]._id,
+        centreRoom: centre.map((b) => b.centreRoom)
       }
     ]);
 
@@ -127,12 +127,12 @@ db.once('open', async () => {
         postCode: '5158',
         email: 'emma.young@gmail.com',
         phone: '0430300987',
-        DogFirstName: 'Angus',
-        DogLastName: 'Young',
-        DogDateOfBirth: '10/02/2022',
+        dogFirstName: 'Angus',
+        dogLastName: 'Young',
+        dogDateOfBirth: '10/02/2022',
         requestedDays: ['mon', 'tue'],
-        Centre: Centre[0]._id,
-        CentreRoom: Centre.map((b) => b.CentreRoom)
+        centre: centre[0]._id,
+        centreRoom: centre.map((b) => b.centreRoom)
       }
     ])
 
