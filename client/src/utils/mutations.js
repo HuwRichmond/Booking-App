@@ -13,8 +13,8 @@ export const LOGIN = gql`
 `;
 
 export const ENQUIRY = gql`
-mutation addEnquiry($firstName: String!, $lastName: String!, $addressLine1: String!, $addressLine2: String, $suburb: String!, $state: String!, $postCode: String!, $email: String!, $phone: String!, $childFirstName: String!, $childLastName: String!, $childDateOfBirth: Date!, $requestedDays: [String]!, $Centre: ID!, $CentreRoom: ID!) {
-  addEnquiry(firstName: $firstName, lastName: $lastName, addressLine1: $addressLine1, addressLine2: $addressLine2, suburb: $suburb, state: $state, postCode: $postCode, email: $email, phone: $phone, childFirstName: $childFirstName, childLastName: $childLastName, childDateOfBirth: $childDateOfBirth, requestedDays: $requestedDays, Centre: $Centre, CentreRoom: $CentreRoom) {
+mutation addEnquiry($firstName: String!, $lastName: String!, $addressLine1: String!, $addressLine2: String, $suburb: String!, $state: String!, $postCode: String!, $email: String!, $phone: String!, $childFirstName: String!, $childLastName: String!, $childDateOfBirth: Date!, $requestedDays: [String]!, $centre: ID!, $centreRoom: ID!) {
+  addEnquiry(firstName: $firstName, lastName: $lastName, addressLine1: $addressLine1, addressLine2: $addressLine2, suburb: $suburb, state: $state, postCode: $postCode, email: $email, phone: $phone, childFirstName: $childFirstName, childLastName: $childLastName, childDateOfBirth: $childDateOfBirth, requestedDays: $requestedDays, centre: $centre, centreRoom: $centreRoom) {
     firstName
     lastName
     addressLine1
@@ -28,10 +28,10 @@ mutation addEnquiry($firstName: String!, $lastName: String!, $addressLine1: Stri
     childLastName
     childDateOfBirth
     requestedDays
-    Centre {
+    centre {
       _id
     }
-    CentreRoom {
+    centreRoom {
       _id
     }
   }

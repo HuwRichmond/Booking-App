@@ -170,6 +170,6 @@ const userSchema = new Schema({
 });
 
 
-const Dogs = mongoose.model('Dogs', userSchema);
+const Dog = mongoose.model('Dog', userSchema);
 
-module.exports = Dogs;
+module.exports = Dog;

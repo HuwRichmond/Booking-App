@@ -55,7 +55,7 @@ function App() {
     <ApolloProvider client={client}>
       
       <Router>
-        <div className="App" data-id={Auth.loggedIn() ? "murad" : "Ali"}>
+        <div className="App" data-id={Auth.loggedIn() ? "huw" : "richmond"}>
           
           <Suspense fallback={
             <Flex
@@ -94,7 +94,7 @@ function App() {
               />
               <Route 
                 path="/enquire" 
-                element={<Enquire centres={AllCentres}/>} 
+                element={<Enquire Centres={AllCentres}/>} 
                 
               />
               <Route 
@@ -121,7 +121,7 @@ function App() {
 
               <Route 
                 path="/dashboard/centres" 
-                element={<Centres />} 
+                element={<Centres/>} 
               />
 
               <Route 

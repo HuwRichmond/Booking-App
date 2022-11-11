@@ -69,11 +69,11 @@ const enquirySchema = new Schema({
   enrollmentCode: {
     type: String
   },
-  Centre: [{
+  centre: [{
     type: Schema.Types.ObjectId,
     ref: 'Centre',
   }],
-  CentreRoom: [{
+  centreRoom: [{
     type: Schema.Types.ObjectId,
     ref: 'CentreRoom',
   }]

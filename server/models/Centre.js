@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  CentreName: {
+  centreName: {
     type: String,
     required: true,
     trim: true
@@ -44,7 +44,7 @@ const userSchema = new Schema({
   phone2: {
     type: String,
   },
-  CentreRoom: [{
+  centreRoom: [{
     type: Schema.Types.ObjectId,
     ref: 'CentreRoom',
   }]

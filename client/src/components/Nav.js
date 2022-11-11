@@ -293,7 +293,7 @@ if (!Auth.loggedIn())
 else
 {
   NAV_ITEMS.push({label: 'Check Enquiries',href: '/dashboard'});
-  NAV_ITEMS.push({label: 'Centres',href: '/dashboard/Centres'});
+  NAV_ITEMS.push({label: 'Centres',href: '/dashboard/centres'});
   if (Auth.getUserType()==='SUPER_ADMIN'){
     NAV_ITEMS.push({label: 'Users',href: '/dashboard'});
   }

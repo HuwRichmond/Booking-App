@@ -101,7 +101,7 @@ const stats = [
     title: '45',
     content: (
       <>
-        <StatsText>Dogs</StatsText> are members at the Centre.
+        <StatsText>Dogs</StatsText> are members.
       </>
     ),
   },

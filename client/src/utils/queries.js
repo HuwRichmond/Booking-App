@@ -28,11 +28,11 @@ export const QUERY_ENQUIRIES = gql`
       childDateOfBirth
       createdAt
       requestedDays
-      Centre {
+      centre {
         _id
-        CentreName
+        centreName
       }
-      CentreRoom {
+      centreRoom {
         _id
         roomName
         roomCapacity
@@ -58,11 +58,11 @@ export const QUERY_SINGLE_ENQUIRY = gql `
       childDateOfBirth
       createdAt
       requestedDays
-      Centre {
+      centre {
         _id
-        CentreName
+        centreName
       }
-      CentreRoom {
+      centreRoom {
         _id
         roomCapacity
         roomName
@@ -75,7 +75,7 @@ export const CENTRES = gql`
 query AllCentres {
   allCentres {
     _id
-    CentreName
+    centreName
     addressLine1
     addressLine2
     suburb
@@ -85,7 +85,7 @@ query AllCentres {
     email2
     phone1
     phone2
-    CentreRoom {
+    centreRoom {
       _id
       roomName
       roomCapacity
@@ -114,11 +114,11 @@ query searchEnrollmentLink($enrollmentCode: String!) {
     childDateOfBirth
     requestedDays
     createdAt
-    Centre {
+    centre {
       _id
-      CentreName
+      centreName
     }
-    CentreRoom {
+    centreRoom {
       _id
       roomName
     }

@@ -59,7 +59,7 @@ const userSchema = new Schema({
   centres: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Centres',
+      ref: 'Centre',
     },
   ]
 });

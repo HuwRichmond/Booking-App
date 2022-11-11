@@ -58,8 +58,8 @@ import { CENTRES } from '../utils/queries';
             childLastName: formState.clastName,
             childDateOfBirth: "2013/01/01",
             requestedDays: formState.reqdays,
-            Centre: formState.Centre,
-            CentreRoom: formState.CentreRoom,
+            centre: formState.centre,
+            centreRoom: formState.centreRoom,
           },
         });
         setIsLoading(false);
@@ -98,14 +98,14 @@ import { CENTRES } from '../utils/queries';
       if (selectValue){
         if (selectValue.target.value === "NONE")
         {
-          console.log("select Centre");
+          console.log("select centre");
           return([]);
         }
         else{
-          const CentreRooms = centres.filter(Centre => Centre._id === selectValue.target.value);
+          const centreRooms = centres.filter(centre => centre._id === selectValue.target.value);
           let rm=[];
-          const rooms = [CentreRooms.map((m) =>
-              m.CentreRoom.forEach(p => {
+          const rooms = [centreRooms.map((m) =>
+              m.centreRoom.forEach(p => {
                 rm.push({
                   value: p._id,
                   label: p.roomName
@@ -115,7 +115,7 @@ import { CENTRES } from '../utils/queries';
 
           setFormState({
             ...formState,
-            ["Centre"]: selectValue.target.value,
+            ["centre"]: selectValue.target.value,
           });
           return rm;
       }}
@@ -348,36 +348,36 @@ import { CENTRES } from '../utils/queries';
                   </HStack>
                   <HStack spacing={20}>
                     <Box>
-                    <FormControl id="Centre" isRequired >
-                        <FormLabel color={'white'}>Location</FormLabel>
+                    <FormControl id="centre" isRequired >
+                        <FormLabel color={'white'}>Centre Location</FormLabel>
                         <Select
                           border={'none'}
                           bg={'whiteAlpha.600'}
                           color={'black'}
                           placeholder=""
-                          name="Centre"
-                          type="Centre"
+                          name="centre"
+                          type="centre"
                           //onChange={handleCentreChange}
                           onChange={value => setSelectValue(value)}
                         >
                           <option key="NONE" value="NONE">Choose Centre</option>
                           {centres.map((m) => (
-                            <option key={m._id} value={m._id}>{m.CentreName} </option>
+                            <option key={m._id} value={m._id}>{m.centreName} </option>
                           ))
                           }
                         </Select>
                       </FormControl>
                     </Box>
                     <Box>
-                      <FormControl id="CentreRoom" isRequired >
+                      <FormControl id="centreRoom" isRequired >
                         <FormLabel color={'white'}>Room</FormLabel>
                         <Select
                           border={'none'}
                           bg={'whiteAlpha.600'}
                           color={'black'}
                           placeholder=""
-                          name="CentreRoom"
-                          type="CentreRoom"
+                          name="centreRoom"
+                          type="centreRoom"
                           onChange={handleChange}
                           // option={options}
                         >
