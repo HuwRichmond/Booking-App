@@ -8,7 +8,7 @@ This project is a MERN stack single-page application that works with real-world 
 
 * GraphQL with a Node.js and Express.js server.
 
-* ongoDB and the Mongoose ODM for the database.
+* MongoDB and the Mongoose ODM for the database.
 
 * Queries and mutations for retrieving, adding, updating, and deleting data.
 
@@ -28,9 +28,11 @@ This project is a MERN stack single-page application that works with real-world 
 
 * Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
+The project is a webpage for a fictional dog day care centre that provides information about the business to customers and allows customers to send requests to the centre via the webpage to book their dogs into the day care centre. The day care centre staff can log in and view booking requests.
+
 ## Screenshot
 
-![Screenshot of deployed application on browser".](./client/assets/Screenshot.png)
+![Screenshot of deployed application on browser".](./client/src/assets/images/Screenshot.png)
 
 ## Required Packages
 
