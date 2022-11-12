@@ -77,7 +77,7 @@ db.once('open', async () => {
         email2: '',
         phone1: '0401234567',
         phone2: '',
-        centreRoom: centreroom[0]._id
+        centreRoom: centreroom[0, 1, 2]._id
       },
       {
         centreName: 'Somerton Park Centre',
@@ -90,7 +90,7 @@ db.once('open', async () => {
         email2: '',
         phone1: '0412345678',
         phone2: '',
-        centreRoom: centreroom[2]._id
+        centreRoom: centreroom[0, 1, 2]._id
       }
     ]);
 
