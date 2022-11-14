@@ -51,13 +51,15 @@ After cloning the repository and installing the required npm packages, users can
 npm run seed
 npm run develop
 ```
+To run the app locally, users will need an open instance of Mongodb running locally.
 
 ## License 
    
    None
 
-## Github Repository
- [github.com/HuwRichmond/Booking-App](https://github.com/HuwRichmond/Booking-App)
+## URLs
+* [github.com/HuwRichmond/Booking-App](https://github.com/HuwRichmond/Booking-App)
+* [afternoon-caverns-61979.herokuapp.com](https://afternoon-caverns-61979.herokuapp.com/)
 
 ## Contact
 
