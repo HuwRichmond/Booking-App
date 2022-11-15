@@ -93,15 +93,7 @@ const Dashboard = () => {
           shadow="lg"
         >
           {loading ? (
-          // <Stack mt={20} alignSelf={'center'} direction='row' spacing={4}>
-          //   <Spinner
-          //    thickness='8px'
-          //    speed='0.65s'
-          //    emptyColor='gray.200'
-          //    color="#f07167ff"
-          //    size='xl'
-          //   />
-          // </Stack>
+
           <Text
             fontFamily={"heading"}
             fontWeight={700}

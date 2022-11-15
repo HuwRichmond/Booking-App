@@ -1,7 +1,6 @@
   import React, { useState, useEffect } from 'react';
   import { useMutation } from '@apollo/client';
 import image from '../assets/images/pexels-pixabay-48794.jpg';
-// import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import {

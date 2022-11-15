@@ -1,6 +1,5 @@
 import React from "react";
 import image from "../assets/images/pexels-pixabay-277477.jpg";
-// Import the `useParams()` hook from React Router
 import { useParams } from "react-router-dom";
 import { useMutation, useQuery } from "@apollo/client";
 
@@ -27,17 +26,12 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  // useColorModeValue,
-  // VisuallyHidden,
 } from "@chakra-ui/react";
-// import { MdLocalShipping } from 'react-icons/md';
 
 const SingleEnquiry = () => {
-  // Use `useParams()` to retrieve value of the route parameter `:enquiryId`
   const { enquiryId } = useParams();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { isNewOpen, onNewOpen} = useDisclosure();
-  // Use `useQury` to retrieve apollo query for a single enquiry
   const { loading, data } = useQuery(QUERY_SINGLE_ENQUIRY, {
     variables: { enquiryId: enquiryId },
   });
@@ -202,14 +196,7 @@ const SingleEnquiry = () => {
                 </Button>
               </Stack>
             </Flex>
-            {/* <Stack
-                direction="row"
-                alignItems="center"
-                justifyContent={"center"}
-            >
-                <MdLocalShipping />
-                <Text>2-3 business days delivery</Text>
-            </Stack> */}
+            {}
             </>
         )}
         </Stack>

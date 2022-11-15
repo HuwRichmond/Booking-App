@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
-import Logo from '../assets/images/Itsy-Bitsy_Footer.png';
+import Logo from '../assets/images/Footer.png';
 
 const ListHeader = ({ dogs }: { dogs: ReactNode }) => {
   return (

@@ -34,6 +34,14 @@ The project is a webpage for a fictional dog day care centre that provides infor
 
 ![Screenshot of deployed application on browser".](./client/src/assets/images/Screenshot.png)
 
+## Technologies Used
+
+* MERN
+* MongoDB
+* Express
+* React
+* NodeJS
+
 ## Required Packages
 
 Install the required dependendcies with the following terminal command:

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
-// import { Box, Heading, Text } from '@chakra-ui/react';
+//
 import { CheckCircleIcon } from '@chakra-ui/icons';
 import { useQuery } from '@apollo/client';
 import { GET_DETAILS_FOR_ENROLLMENT } from '../utils/queries';
@@ -33,10 +33,8 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  // useColorModeValue,
-  // VisuallyHidden,
+  //
 } from "@chakra-ui/react";
-// import Moment from 'react-moment';
 import changeDate, {formatDate} from '../utils/check';
 
 
@@ -71,11 +69,7 @@ export default function Enrollment() {
   const requestedDays = [enquiry.requestedDays];
   // const requestDay = enquiry.map((i) => {return i})
   console.log("RequestesDays", requestedDays);
-  // const test =(event) =>{
-  //   for (var i=0; i<requestedDays.length; i++){
-  //     console.log(i,requestedDays[i])
-  //   }
-  // }
+
   return (
     <Flex
           pt={{ base: 10, md: 0 }}
@@ -186,11 +180,7 @@ export default function Enrollment() {
                         {/* {requestedDays.forEach(m =>{<FormLabel>Murad {console.log("Mradsa",m[0])} </FormLabel>})} */}
                           <CheckboxGroup name="checkdays" colorScheme='green' onChange={handleChangeDays} >
                             <Stack spacing={[1, 5]} direction={['column', 'row']}>
-                              {/* {requestedDays.map((m) => (
-                                m.forEach(element =>
-                                <Checkbox color={'white'} value={element}>{element}</Checkbox>  
-                                )
-                              ))} */}
+                              {}
 
                               <Checkbox color={'white'} value='Mon'>Mon</Checkbox>
                               <Checkbox color={'white'} value='Tues'>Tues</Checkbox>

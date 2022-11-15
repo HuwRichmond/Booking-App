@@ -12,7 +12,6 @@ import {
 import React, { useState, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import {RESET_CODE} from  '../utils/mutations';
-// import ResetPassword from './ResetPassword';
 import image from '../assets/images/pexels-pixabay-48794.jpg';
 
   const Forget  = (props) =>{

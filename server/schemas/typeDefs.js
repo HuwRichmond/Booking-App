@@ -94,4 +94,3 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
-//addEnquiry(firstName: String, lastName: String): Enquiry
